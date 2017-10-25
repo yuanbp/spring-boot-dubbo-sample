@@ -1,0 +1,4 @@
+com\sbtdubbo\consumer\controller\CityController.class
+com\sbtdubbo\consumer\utils\DynamicDubboPortReaderImpl.class
+com\sbtdubbo\consumer\LauncherConsumer.class
+com\sbtdubbo\consumer\App.class

@@ -1,0 +1,3 @@
+com\sbtdubbo\api\App.class
+com\sbtdubbo\api\domain\CityInfo.class
+com\sbtdubbo\api\interfaces\CityService.class
