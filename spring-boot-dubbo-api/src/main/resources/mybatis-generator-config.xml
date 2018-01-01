@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry location="F:\IDESoftWare\maven_repo\repo\mysql\mysql-connector-java\5.1.44\mysql-connector-java-5.1.44.jar" />
+
+    <context id="BASEUSER" targetRuntime="MyBatis3">
+        <!--下面的配置使得生成的model中可以使用数据库中的Comment对字段进行注释 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+
+        <!-- JDBC 连接信息 -->
+        <!-- <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@192.168.1.2:1521:mf"
+            userId="mf" password="mf"> </jdbcConnection> -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/springboot" userId="root"
+                        password="123456">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <!--生成Model类存放位置 -->
+        <javaModelGenerator targetPackage="com.sbtdubbo.api.model" targetProject="H:\work_cloud\workspace_idea_01\spring-boot-dubbo-sample\spring-boot-dubbo-api\src\main\java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+        <!--生成映射文件存放位置 -->
+        <sqlMapGenerator targetPackage="com.sbtdubbo.api.mapper" targetProject="H:\work_cloud\workspace_idea_01\spring-boot-dubbo-sample\spring-boot-dubbo-api\src\main\java">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+        <!--生成Dao类存放位置 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.sbtdubbo.api.mapper" targetProject="H:\work_cloud\workspace_idea_01\spring-boot-dubbo-sample\spring-boot-dubbo-api\src\main\java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+        <!--生成对应表及类名 -->
+        <table tableName="sec_permission" domainObjectName="SecPermission"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false" />
+        </table>
+        <table tableName="sec_role" domainObjectName="SecRole"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false" />
+        </table>
+        <table tableName="sec_role_permission" domainObjectName="SecRolePermission"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false" />
+        </table>
+        <table tableName="sec_user" domainObjectName="SecUser"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false" />
+        </table>
+        <table tableName="sec_user_role" domainObjectName="SecUserRole"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <property name="useActualColumnNames" value="false" />
+        </table>
+
+        <!--<javaModelGenerator targetPackage="com.metinform.entity"
+            targetProject="fastfreight">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator> -->
+
+        <!--生成映射文件存放位置 -->
+        <!--<sqlMapGenerator targetPackage="mybatis.mapper"
+            targetProject="fastfreight">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator> -->
+
+        <!--ANNOTATEDMAPPER属性值使得生成的Mapper是Annotation的 -->
+        <!-- <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="com.manage.test"
+            targetProject="manage"> <property name="enableSubPackages" value="true" />
+            </javaClientGenerator> -->
+
+        <!-- <table tableName="base_user" domainObjectName="UserRole"></table> -->
+        <!--useActualColumnNames属性使得生成的model中的属性与数据库表中的属性大小写一致 -->
+        <!--<table tableName="TB_P_GOODS_LICENSE" domainObjectName="TBPGOODSLICENSE">
+            <property name="useActualColumnNames" value="false" /> </table> -->
+        <!--<table tableName="CUSTOMS_DECLARTION_HEAD" domainObjectName="CustomsDeclartionHead">
+            <property name="useActualColumnNames" value="false" />
+        </table> -->
+
+    </context>
+</generatorConfiguration>

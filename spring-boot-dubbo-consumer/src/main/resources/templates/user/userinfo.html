@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>UserInfo</title>
+    <link th:href="@{../bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{../bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container-fluid" style="width: 500px;border-style: solid;border-width: 1px;">
+        <div class="row-fluid">
+            <div class="span12">
+                <h3>
+                    . 用户信息
+                </h3>
+                <form class="form-horizontal" action="/user/selectbyprimarykey">
+                    <div class="control-group">
+                        <label class="control-label" for="id">ID</label>
+                        <div class="controls">
+                            <input id="id" name="id" type="text" th:value="${returnuser == null ? 'null' : returnuser.id}" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="name">姓名</label>
+                        <div class="controls">
+                            <input id="name" name="name" type="text" th:value="${returnuser == null ? 'null' : returnuser.name}" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="age">年龄</label>
+                        <div class="controls">
+                            <input id="age" name="age" type="text" th:value="${returnuser == null ? 'null' : returnuser.age}" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="password">密码</label>
+                        <div class="controls">
+                            <input id="password" name="password" type="password" th:value="${returnuser == null ? 'null' : returnuser.password}" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script th:src="@{../jquery-3.1.1.js}" type="text/javascript"></script>
+    <script th:src="@{../bootstrap/js/bootstrap.min.js}" type="text/javascript"></script>
+
+</body>
+</html>

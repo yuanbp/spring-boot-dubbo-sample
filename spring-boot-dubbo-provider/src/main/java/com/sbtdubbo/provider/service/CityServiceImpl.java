@@ -29,7 +29,7 @@ public class CityServiceImpl implements CityService {
             System.out.println(address.substring(address.indexOf("</em>：")+6,address.indexOf("</h3>")));
             return new CityInfo(zipCode,address.substring(address.indexOf("</em>：")+6,address.indexOf("</h3>")));
         } catch (Exception e) {
-            System.out.println("起您输入误");
+            System.err.println("对不起您的输入有误");
         }
         return null;
     }

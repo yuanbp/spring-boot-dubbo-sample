@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.sbtdubbo.consumer.configs.DubboConfiguration,\
+com.sbtdubbo.consumer.author.ShiroConfiguration

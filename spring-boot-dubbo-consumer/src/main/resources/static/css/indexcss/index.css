@@ -1,0 +1,30 @@
+.sel_btn{
+    height: 21px;
+    line-height: 21px;
+    padding: 0 11px;
+    background: #02bafa;
+    border: 1px #26bbdb solid;
+    border-radius: 3px;
+    /*color: #fff;*/
+    display: inline-block;
+    text-decoration: none;
+    font-size: 12px;
+    outline: none;
+}
+.login_btn{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 11px;
+    background: #02bafa;
+    border: 1px #26bbdb solid;
+    border-radius: 3px;
+    /*color: #fff;*/
+    display: inline-block;
+    text-decoration: none;
+    font-size: 12px;
+    outline: none;
+    margin-left: 250px;
+}
+.ch_cls{
+    background: #e4e4e4;
+}
